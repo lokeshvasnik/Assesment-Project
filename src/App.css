@@ -1,0 +1,160 @@
+/* Form Styles */
+@import url(./Styles/form.css);
+@import url(./Styles/mediaQuery.css);
+
+/* Root */
+:root {
+    --primary-yellow: #f7ce31;
+    --primary-grey: #717171;
+    --primary-black: #000;
+    --primary-white: #fff;
+}
+
+/* Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+
+nav {
+    background-color: var(--primary-yellow);
+}
+
+.navBtn:hover {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+    transition: 0.1s ease-in-out;
+}
+
+select {
+    background-color: var(--primary-yellow);
+}
+
+/* Input Search */
+
+.inputSearch {
+    border-bottom: 5px solid var(--primary-black);
+    transition: height 200ms;
+    height: 5rem;
+}
+
+h2 {
+    transition: 0.3s all ease;
+}
+h2:hover {
+    color: var(--primary-grey);
+    transition: 0.3s all ease-in-out;
+}
+h2 span {
+    color: var(--primary-black);
+}
+h2:hover span {
+    color: var(--primary-black);
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Image Ten */
+
+.hover-image {
+    opacity: 0;
+}
+
+.image-container:hover .hover-image {
+    opacity: 1;
+}
+
+.image-container:hover .image:not(.hover-image) {
+    opacity: 0;
+}
+
+.home-image-container {
+    margin: 0 20px;
+    position: relative;
+    width: 300px; /* Adjust based on your image size */
+    height: 400px; /* Adjust based on your image size */
+}
+
+.home-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hover-image {
+    opacity: 0;
+}
+
+.home-image-container:hover .hover-image {
+    opacity: 1;
+}
+
+.home-image-container:hover .image:not(.hover-image) {
+    opacity: 0;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--primary-yellow);
+}
+
+/* Marquee Animation */
+
+.marquee {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+.marquee__slider {
+    display: flex;
+    flex-direction: row;
+    object-fit: cover;
+    padding: 5px;
+    animation: marquee linear 5s infinite;
+}
+
+.marquee__slider span {
+    margin: 0px 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* UTIls */
+
+/* #ffc700 #10a958 #000000 #fff */
+
+.active {
+    background-color: #000;
+    color: #fff !important;
+}
+
+.show {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: height 200ms;
+}
